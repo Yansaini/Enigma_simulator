@@ -25,6 +25,7 @@ def cifrar_letra(letra, mapeo, posicion):
     return abecedario[indice_salida]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 def descifrar_letra(letra, mapeo, posicion):
     abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -114,6 +115,9 @@ def editar_rotores():
 
 =======
 >>>>>>> origin/Develop
+=======
+
+>>>>>>> 00084cf (Cifrado de letra)
 #Menu principal :)
 
 def main():
