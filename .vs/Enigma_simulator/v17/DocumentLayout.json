@@ -19,12 +19,29 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "main.py",
               "DocumentMoniker": "C:\\Users\\magya\\Desktop\\repos\\Enigma_simulator\\main.py",
               "RelativeDocumentMoniker": "main.py",
               "ToolTip": "C:\\Users\\magya\\Desktop\\repos\\Enigma_simulator\\main.py",
               "RelativeToolTip": "main.py",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+=======
+              "Title": "funciones.py",
+              "DocumentMoniker": "C:\\Users\\magya\\Desktop\\repos\\Enigma_simulator\\funciones.py",
+              "RelativeDocumentMoniker": "funciones.py",
+              "ToolTip": "C:\\Users\\magya\\Desktop\\repos\\Enigma_simulator\\funciones.py",
+              "RelativeToolTip": "funciones.py",
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+>>>>>>> origin/Develop
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+>>>>>>> Stashed changes
+>>>>>>> 6dae3cc (Comentarios de ayuda para funcion leer_rueda)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2025-12-09T16:09:59.922Z",
               "EditorCaption": ""
