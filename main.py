@@ -24,6 +24,35 @@ def cifrar_letra(letra, mapeo, posicion):
     indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
     return abecedario[indice_salida]
 
+<<<<<<< HEAD
+=======
+def descifrar_letra(letra, mapeo, posicion):
+    abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    indice = (abecedario.index(letra) + posicion) % 26
+    # Esto hace el mapeo inverso (es decir, si A->E, entonces E->A)
+    inverso = [""] * 26
+    for i in range(26):
+        inverso[abecedario.index(mapeo[i])] = abecedario[i]
+    mapeo_inverso = "".join(inverso)  # Para convertir la lista a string
+    letra_cifrada = mapeo_inverso[indice]
+    indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
+    return abecedario[indice_salida]
+
+def mover_rotores(posiciones_actuales, rotor):
+    # Rotor1 (derecha) avanza 1 posicion
+    posiciones_actuales[0] = (posiciones_actuales[0] + 1) % 26
+    # Si punto_avance es Z, no mueve a los otros rotores
+    if rotor[0][1] == "Z": 
+        return posiciones_actuales
+    # Si rotor1 llega a su punto de avance, se mueve rotor2
+    if chr(posiciones_actuales[0] + 65) == rotor[0][1]:
+        posiciones_actuales[1] = (posiciones_actuales[1] + 1) % 26
+        # Si rotor2 llega a su punto de avance, se mueve rotor3
+        if chr(posiciones_actuales[1] + 65) == rotor[1][1]:
+            posiciones_actuales[2] = (posiciones_actuales[2] + 1) % 26
+    return posiciones_actuales
+
+>>>>>>> origin/Develop
 
 #this funcion clean the text bfore encrypting it
 def limpiar_texto(texto):
@@ -35,6 +64,32 @@ def limpiar_texto(texto):
     return resultado
 
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+#submenu functions of option 3.1
+def ver_rotor():
+    print("Que rotor quieres ver? (1, 2, 3)")
+    rotor_num = input("> ")
+    if rotor_num == "1":
+        archivo = "rotor1.txt"
+    elif rotor_num == "2":
+        archivo = "rotor2.txt"
+    elif rotor_num == "3":
+        archivo = "rotor3.txt"
+    else:
+        print("Numero de rotor invalido")
+        return
+    #we load rotor infor the mapping and advamces
+    mapeo, avance = leer_rueda(archivo)
+    #rotor info
+    print("\nRotor selleccionado: ", archivo)
+    print("Mapeo: ", mapeo)
+    print("Punto de avance: ", avance)
+    print("")
+
+
+>>>>>>> Stashed changes
 #submenu of option 3
 def editar_rotores():
     while True:
@@ -57,6 +112,8 @@ def editar_rotores():
             print("Opcion inavalida, intentalo de nuevo")
        
 
+=======
+>>>>>>> origin/Develop
 #Menu principal :)
 
 def main():
@@ -69,6 +126,7 @@ def main():
 
         opcion = input("> ")
         if opcion == "1":
+<<<<<<< HEAD
             # para cifrar
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
@@ -90,13 +148,23 @@ def main():
 
             print("Mensaje cifrado: ",resultado)
             
+=======
+            #anadir para cifrar
+            mensaje = input("Escribe tu mensaje que quieres cifrar: ")
+            mensaje = limpiar_texto(mensaje) #
+            print("mensaje cifrado: ", mensaje)
+>>>>>>> origin/Develop
             a = 1
         elif opcion == "2":
             #anadir para descifrar
             a=2
         elif opcion == "3":
+<<<<<<< HEAD
             #anadir para editar rotores 
             editar_rotores()
+=======
+            #anadir para editar rotores
+>>>>>>> origin/Develop
             a=3
         elif opcion == "4": 
             print("Gracias por sus servicios.")
