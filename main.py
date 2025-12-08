@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 
 def leer_rueda(nombre_archivo):
     try:
@@ -15,7 +13,18 @@ def leer_rueda(nombre_archivo):
         # Mapeo
         return "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "Z"
 
->>>>>>> Stashed changes
+
+def cifrar_letra(letra, mapeo, posicion):
+    abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    #1. Mirar que numero es la letra (A=0, B=1, etc)
+    indice = (abecedario.index(letra) + posicion) % 26
+    #2. Cifrar usando el mapeo de la rueda
+    letra_cifrada = mapeo[indice]
+    #3. Convertir de vuelta a posicion normal
+    indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
+    return abecedario[indice_salida]
+
+
 #Menu principal :)
 
 def main():
