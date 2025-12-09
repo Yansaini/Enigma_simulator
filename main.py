@@ -35,6 +35,28 @@ def limpiar_texto(texto):
     return resultado
 
 
+#submenu functions of option 3.1
+def ver_rotor():
+    print("Que rotor quieres ver? (1, 2, 3)")
+    rotor_num = input("> ")
+    if rotor_num == "1":
+        archivo = "rotor1.txt"
+    elif rotor_num == "2":
+        archivo = "rotor2.txt"
+    elif rotor_num == "3":
+        archivo = "rotor3.txt"
+    else:
+        print("Numero de rotor invalido")
+        return
+    #we load rotor infor the mapping and advamces
+    mapeo, avance = leer_rueda(archivo)
+    #rotor info
+    print("\nRotor selleccionado: ", archivo)
+    print("Mapeo: ", mapeo)
+    print("Punto de avance: ", avance)
+    print("")
+
+
 #submenu of option 3
 def editar_rotores():
     while True:
@@ -43,7 +65,7 @@ def editar_rotores():
         print("2. Cambiar posicion inicial")
         print("3. Cambiar mapeo del rootor")
         print("4. Volver")
-
+        #falta editar las funciones
         sub_opcion = input("> ")
         if sub_opcion == "1":
             ver_rotor()
