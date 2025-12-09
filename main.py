@@ -77,21 +77,16 @@ def main():
             #anadir para cifrar
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
-            print("mensaje cifrado: ", mensaje)
->>>>>>> origin/Develop
+            print("Mensaje Limpio: ", mensaje)
             a = 1
         elif opcion == "2":
             #anadir para descifrar
             a=2
         elif opcion == "3":
-<<<<<<< HEAD
-            #anadir para editar rotores 
-            editar_rotores()
-=======
             #anadir para editar rotores
->>>>>>> origin/Develop
+            editar_rotores()
             a=3
-        elif opcion == "4": 
+        elif opcion == "4":
             print("Gracias por sus servicios.")
             break
         else:
