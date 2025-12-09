@@ -24,6 +24,18 @@ def cifrar_letra(letra, mapeo, posicion):
     indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
     return abecedario[indice_salida]
 
+def descifrar_letra(letra, mapeo, posicion):
+    abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    indice = (abecedario.index(letra) + posicion) % 26
+    # Esto hace el mapeo inverso (es decir, si A->E, entonces E->A)
+    inverso = [""] * 26
+    for i in range(26):
+        inverso[abecedario.index(mapeo[i])] = abecedario[i]
+    mapeo_inverso = "".join(inverso)  # Para convertir la lista a string
+    letra_cifrada = mapeo_inverso[indice]
+    indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
+    return abecedario[indice_salida]
+
 
 #this funcion clean the text bfore encrypting it
 def limpiar_texto(texto):
