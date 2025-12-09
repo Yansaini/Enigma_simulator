@@ -42,16 +42,23 @@ def main():
         print("--- MAQUINA ENIGMA ---\n---------------------")
         print("1. Cifrar mensaje.")
         print("2. Descifrar mensaje.")
-        print("3. Salir.")
+        print("3. Editar rotores")
+        print("4. Salir.")
 
         opcion = input("> ")
         if opcion == "1":
             #anadir para cifrar
+            mensaje = input("Escribe tu mensaje que quieres cifrar: ")
+            mensaje = limpiar_texto(mensaje) #
+            print("mensaje cifrado: ", mensaje)
             a = 1
         elif opcion == "2":
             #anadir para descifrar
             a=2
-        elif opcion == "3": 
+        elif opcion == "3":
+            #anadir para editar rotores
+            a=3
+        elif opcion == "4": 
             print("Gracias por sus servicios.")
             break
         else:
