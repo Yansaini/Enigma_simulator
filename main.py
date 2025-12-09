@@ -26,6 +26,7 @@ def cifrar_letra(letra, mapeo, posicion):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 def descifrar_letra(letra, mapeo, posicion):
     abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -38,6 +39,62 @@ def descifrar_letra(letra, mapeo, posicion):
     letra_cifrada = mapeo_inverso[indice]
     indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
     return abecedario[indice_salida]
+=======
+
+#this funcion clean the text bfore encrypting it
+def limpiar_texto(texto):
+    texto = texto.upper() # convert everything in uppercase
+    resultado = ""
+    for ch in texto:
+        if "A" <= ch <= "Z": #only keep letter from A to Z
+            resultado += ch
+    return resultado
+
+
+#submenu functions of option 3.1
+def ver_rotor():
+    print("Que rotor quieres ver? (1, 2, 3)")
+    rotor_num = input("> ")
+    if rotor_num == "1":
+        archivo = "rotor1.txt"
+    elif rotor_num == "2":
+        archivo = "rotor2.txt"
+    elif rotor_num == "3":
+        archivo = "rotor3.txt"
+    else:
+        print("Numero de rotor invalido")
+        return
+    #we load rotor infor the mapping and advamces
+    mapeo, avance = leer_rueda(archivo)
+    #rotor info
+    print("\nRotor selleccionado: ", archivo)
+    print("Mapeo: ", mapeo)
+    print("Punto de avance: ", avance)
+    print("")
+
+
+#submenu of option 3
+def editar_rotores():
+    while True:
+        print("--- EDITAR ROTORES ---\n---------------------")
+        print("1. Ver rotor")
+        print("2. Cambiar posicion inicial")
+        print("3. Cambiar mapeo del rootor")
+        print("4. Volver")
+        #falta editar las funciones
+        sub_opcion = input("> ")
+        if sub_opcion == "1":
+            ver_rotor()
+        elif sub_opcion == "2":
+            print("Función para cambiar posicion inicial")
+        elif sub_opcion == "3":
+            print("Función para cambiar mapeo del rotor")
+        elif sub_opcion == "4":
+            break
+        else:
+            print("Opcion inavalida, intentalo de nuevo")
+       
+>>>>>>> origin/main
 
 #Menu principal :)
 
