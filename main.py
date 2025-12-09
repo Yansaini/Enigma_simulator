@@ -49,10 +49,19 @@ def main():
 
         opcion = input("> ")
         if opcion == "1":
-            #anadir para cifrar
+            # para cifrar
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
-            print("mensaje Limpio: ", mensaje)
+            print("Mensaje Limpio: ", mensaje)
+            # rotor posicions
+            pos1 = 0
+            pos2 = 0
+            pos3 =0
+            print("Posiciones inicuales:", pos1,pos2,pos3)
+
+            rotor1_mapeo, rotor1_avance = leer_rueda("rotor1.txt")
+            rotor2_mapeo, rotor2_avance = leer_rueda("rotor2.txt")
+            rotor3_mapeo, rotor3_avance = leer_rueda("rotor3.txt")
 
             resultado = ""
 
