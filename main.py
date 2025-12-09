@@ -36,6 +36,20 @@ def descifrar_letra(letra, mapeo, posicion):
     indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
     return abecedario[indice_salida]
 
+def mover_rotores(posiciones_actuales, rotor):
+    # Rotor1 (derecha) avanza 1 posicion
+    posiciones_actuales[0] = (posiciones_actuales[0] + 1) % 26
+    # Si punto_avance es Z, no mueve a los otros rotores
+    if rotor[0][1] == "Z": 
+        return posiciones_actuales
+    # Si rotor1 llega a su punto de avance, se mueve rotor2
+    if chr(posiciones_actuales[0] + 65) == rotor[0][1]:
+        posiciones_actuales[1] = (posiciones_actuales[1] + 1) % 26
+        # Si rotor2 llega a su punto de avance, se mueve rotor3
+        if chr(posiciones_actuales[1] + 65) == rotor[1][1]:
+            posiciones_actuales[2] = (posiciones_actuales[2] + 1) % 26
+    return posiciones_actuales
+
 
 #this funcion clean the text bfore encrypting it
 def limpiar_texto(texto):
