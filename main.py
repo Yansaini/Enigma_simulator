@@ -35,6 +35,8 @@ def limpiar_texto(texto):
     return resultado
 
 
+       
+
 #Menu principal :)
 
 def main():
@@ -50,13 +52,21 @@ def main():
             #anadir para cifrar
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
-            print("mensaje cifrado: ", mensaje)
+            print("mensaje Limpio: ", mensaje)
+
+            resultado = ""
+
+            for letra in mensaje:
+                resultado += letra 
+
+            print("Mensaje cifrado: ",resultado)
+            
             a = 1
         elif opcion == "2":
             #anadir para descifrar
             a=2
         elif opcion == "3":
-            #anadir para editar rotores
+            #anadir para editar rotores 
             a=3
         elif opcion == "4": 
             print("Gracias por sus servicios.")
