@@ -87,10 +87,7 @@ def cifrar_letra(letra, mapeo, posicion):
     indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
     return abecedario[indice_salida]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 def descifrar_letra(letra, mapeo, posicion):
     abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     indice = (abecedario.index(letra) + posicion) % 26
@@ -102,7 +99,7 @@ def descifrar_letra(letra, mapeo, posicion):
     letra_cifrada = mapeo_inverso[indice]
     indice_salida = (abecedario.index(letra_cifrada) - posicion) % 26
     return abecedario[indice_salida]
-=======
+
 
 #this funcion clean the text bfore encrypting it
 def limpiar_texto(texto):
@@ -157,7 +154,7 @@ def editar_rotores():
         else:
             print("Opcion inavalida, intentalo de nuevo")
        
->>>>>>> origin/main
+
 
 #Menu principal :)
 
@@ -171,7 +168,7 @@ def main():
 
         opcion = input("> ")
         if opcion == "1":
-<<<<<<< HEAD
+
             # para cifrar
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
@@ -193,7 +190,7 @@ def main():
 
             print("Mensaje cifrado: ",resultado)
             
-=======
+
             #anadir para cifrar
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
@@ -208,10 +205,9 @@ def main():
         elif opcion == "3":
             #anadir para editar rotores
             a=3
+            editar_rotores()    
         elif opcion == "4": 
-        elif opcion == "3":
             #anadir para editar rotores
-            editar_rotores()
             a=3
         elif opcion == "4":
             print("Gracias por sus servicios.")
