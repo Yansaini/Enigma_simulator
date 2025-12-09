@@ -25,6 +25,16 @@ def cifrar_letra(letra, mapeo, posicion):
     return abecedario[indice_salida]
 
 
+#this funcion clean the text bfore encrypting it
+def limpiar_texto(texto):
+    texto = texto.upper() # convert everything in uppercase
+    resultado = ""
+    for ch in texto:
+        if "A" <= ch <= "Z": #only keep letter from A to Z
+            resultado += ch
+    return resultado
+
+
 #Menu principal :)
 
 def main():
