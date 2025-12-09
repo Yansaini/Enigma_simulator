@@ -35,6 +35,26 @@ def limpiar_texto(texto):
     return resultado
 
 
+#submenu of option 3
+def editar_rotores():
+    while True:
+        print("--- EDITAR ROTORES ---\n---------------------")
+        print("1. Ver rotor")
+        print("2. Cambiar posicion inicial")
+        print("3. Cambiar mapeo del rootor")
+        print("4. Volver")
+
+        sub_opcion = input("> ")
+        if sub_opcion == "1":
+            ver_rotor()
+        elif sub_opcion == "2":
+            print("Función para cambiar posicion inicial")
+        elif sub_opcion == "3":
+            print("Función para cambiar mapeo del rotor")
+        elif sub_opcion == "4":
+            break
+        else:
+            print("Opcion inavalida, intentalo de nuevo")
        
 
 #Menu principal :)
@@ -76,6 +96,7 @@ def main():
             a=2
         elif opcion == "3":
             #anadir para editar rotores 
+            editar_rotores()
             a=3
         elif opcion == "4": 
             print("Gracias por sus servicios.")
