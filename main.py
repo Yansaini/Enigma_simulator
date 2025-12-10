@@ -60,6 +60,18 @@ def limpiar_texto(texto):
             resultado += ch
     return resultado
 
+#this make group of 5 letters
+def agrupar_de_cinco(texto):
+    salida = ""
+    contador = 0
+    for ch in texto:
+        salida += ch
+        contador += 1
+        if contador == 5:
+            salida += " "
+            contador = 0
+    return salida.strip()
+
 
 #submenu functions of option 3.1
 def ver_rotor():
@@ -166,3 +178,4 @@ def main():
             print("Opcion invalida, por favor, vuelva a introducir.")
 
 main()
+
