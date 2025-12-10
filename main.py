@@ -73,6 +73,7 @@ def agrupar_de_cinco(texto):
     return salida.strip()
 
 
+
 #submenu functions of option 3.1
 def ver_rotor():
     print("Que rotor quieres ver? (1, 2, 3)")
@@ -148,7 +149,14 @@ def main():
             resultado = ""
 
             for letra in mensaje:
-                resultado += letra 
+                # Cifrar con rotor 1
+                letra = cifrar_letra(letra, rotor1_mapeo, pos1)
+                # Cifrar con rotor 2    
+                letra = cifrar_letra(letra, rotor2_mapeo, pos2)
+                # Cifrar con rotor 3
+                letra = cifrar_letra(letra, rotor3_mapeo, pos3)
+                
+                resultado += letra #final result
 
             print("Mensaje cifrado: ",resultado)
             
