@@ -136,6 +136,7 @@ def main():
             mensaje = input("Escribe tu mensaje que quieres cifrar: ")
             mensaje = limpiar_texto(mensaje) #
             print("Mensaje Limpio: ", mensaje)
+
             # rotor posicions
             pos1 = 0
             pos2 = 0
@@ -148,37 +149,53 @@ def main():
 
             resultado = ""
 
+
             for letra in mensaje:
                 # Cifrar con rotor 1
                 letra = cifrar_letra(letra, rotor1_mapeo, pos1)
-                # Cifrar con rotor 2    
+                #cifrar con rotor 2    
                 letra = cifrar_letra(letra, rotor2_mapeo, pos2)
-                # Cifrar con rotor 3
+                # cifrar con rotor 3
                 letra = cifrar_letra(letra, rotor3_mapeo, pos3)
-                
                 resultado += letra #final result
 
-            print("Mensaje cifrado: ",resultado)
-            
+            resultado_final = agrupar_de_cinco(resultado)
+            print("Mensaje cifrado: ", resultado_final)
+            #falta pa guardar en archivo
 
-            #anadir para cifrar
-            mensaje = input("Escribe tu mensaje que quieres cifrar: ")
-            mensaje = limpiar_texto(mensaje) #
-            print("mensaje cifrado: ", mensaje)
-            mensaje = input("Escribe tu mensaje que quieres cifrar: ")
-            mensaje = limpiar_texto(mensaje) #
-            print("Mensaje Limpio: ", mensaje)
             a = 1
         elif opcion == "2":
-            #anadir para descifrar
+            #fucnicones pa descifrar
+            mensaje = input("Escribir el mensaje cifrado: ")
+            mensaje = limpiar_texto(mensaje) # limpiar texto
+            print("Mensaje limpio: ", mensaje)
+
+            #rooor posicions
+            pos1 = 0
+            pos2 = 0
+            pos3 =0
+
+            rotor1_mapeo, rotor1_avance = leer_rueda("rotor1.txt")
+            rotor2_mapeo, rotor2_avance = leer_rueda("rotor2.txt")
+            rotor3_mapeo, rotor3_avance = leer_rueda("rotor3.txt")
+
+            resultado = ""
+
+            for letra in mensaje:
+                letra = descifrar_letra(letra, rotor3_mapeo, pos3)
+                letra = descifrar_letra(letra, rotor2_mapeo, pos2)
+                letra = descifrar_letra(letra, rotor1_mapeo, pos1)
+                resultado += letra #final result
+
+            print("Mensaje descifrado: ", resultado)
+
+            #falta pa guardar en archivo
+
             a=2
         elif opcion == "3":
             #anadir para editar rotores
             a=3
             editar_rotores()    
-        elif opcion == "4": 
-            #anadir para editar rotores
-            a=3
         elif opcion == "4":
             print("Gracias por sus servicios.")
             break
